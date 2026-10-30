@@ -19,5 +19,10 @@ def hello(name):
 def square(n):
         return f"Square: {n*n}"
 
+@app.route("/books")
+def books():
+        books = ["Dune","Emma","Ulysses"]
+        return render_template("books.html", books=books)
+
 if __name__ == "__main__":
     app.run(debug=True)
